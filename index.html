@@ -20,6 +20,7 @@
             <a href="#">
                 <img src="svg/noemi-logo.svg" alt="Logo" class="logo">
             </a>
+            <img src="svg/icons8-menu.svg" class="humburger-menu" alt="Humburger menu">
             <nav class="navigation">
                 <ul class="menu">
                     <li class="menu-item">
@@ -42,6 +43,9 @@
                     </li>
                 </ul>
             </nav>
+        </div>
+        <div class="logo-mobile-block">
+            <img src="svg/noemi-logo.svg" alt="Logo" class="logo-mobile">
         </div>
         <div class="inner">
             <h1 class="inner-title">Блог о творчестве, спорте, и образе жизни</h1>
@@ -131,7 +135,7 @@
     <!--Container content-->
 
     <div class="container-content">
-        <main class="content-field">
+        <main class="main-field">
 
 
 
@@ -480,10 +484,13 @@
             <div class="goods-block">
 
                 <!--section 1-->
-                <section class="product-content">
-                    <div class="image-good-pillow">
+                <section class="product-content product1">
+                    <picture class="image-good-pillow">
+                        <source media="(min-width: 641px) and (max-width: 1200px)"
+                            srcset="../images/shop-item-tablet1.jpg">
+                        <source media="(max-width: 640px)" srcset="../images/shop-item-mobile1.jpg">
                         <img src="images/shop-item-desk1.jpg" alt="Pillows shop">
-                    </div>
+                    </picture>
                     <div class="product-description">
 
                         <h1 class="product-title">Подушка на диван</h1>
@@ -503,10 +510,13 @@
                 </section>
 
                 <!--section 2-->
-                <section class="product-content">
-                    <div class="image-good-doll">
+                <section class="product-content product2">
+                    <picture class="image-good-doll">
+                        <source media="(min-width: 641px) and (max-width: 1200px)"
+                            srcset="../images/shop-item-tablet2.jpg">
+                        <source media="(max-width: 640px)" srcset="../images/shop-item-mobile2.jpg">
                         <img src="images/shop-item-desk2.jpg" alt="Doll shop">
-                    </div>
+                    </picture>
                     <div class="product-description">
                         <h1 class="product-title">Кукла "Зайчик"</h1>
                         <p class="product-text">Интерьерная рукодельная кукла "Зайчик", созданию которой посвящена <a
@@ -515,7 +525,6 @@
                         </p>
                         <div class="price-block">
                             <div class="price">
-                                <!--<span class="price1">1000 ₽ </span>-->
                                 <span class="price2 price-doll">3500 ₽ </span>
                             </div>
                             <div class="price-button">
@@ -526,10 +535,13 @@
                 </section>
 
                 <!--section 3-->
-                <section class="product-content">
-                    <div class="image-good-frame">
+                <section class="product-content product3">
+                    <picture class="image-good-frame">
+                        <source media="(min-width: 641px) and (max-width: 1200px)"
+                            srcset="../images/shop-item-tablet3.jpg">
+                        <source media="(max-width: 640px)" srcset="../images/shop-item-mobile3.jpg">
                         <img src="images/shop-item-desk3.jpg" alt="Frame shop">
-                    </div>
+                    </picture>
                     <div class="product-description">
                         <h1 class="product-title">Шестиугольная рамка</h1>
                         <p class="product-text">Набор из двух подушек с модными принтами. Видео о создании <a href="#"
@@ -566,7 +578,13 @@
                         <a href="#" class="mark social-icon-pinterest"></a>
                     </li>
                     <li>
-                        <a href="#" class="mark social-icon-t"></a>
+                        <a href="#" class="mark social-icon-facebook"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="mark social-icon-instagram"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="mark social-icon-tumbrl"></a>
                     </li>
                 </ul>
             </address>
@@ -579,6 +597,58 @@
         </div>
     </footer>
 
+    <!--POPUP -->
+    <div class="visual">
+        <div class="popup">
+            <div class="popup-container">
+                <button type="button" class="close-popup"></button>
+                <div class="popup-field">
+                    <h1 class="feedback-title">Ваш фидбек</h1>
+                    <div class="answer-time">
+                        <span class="question">Как часто вы заходите на сайт ?</span>
+                        <select class="select-field">
+                            <optgroup>
+                                <option>Почти каждый день</option>
+                                <option>Два раза в неделю</option>
+                                <option>Бываю крайне редко</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="answer-mail">
+                        <span class="question">Вы подписаны на e-mail рассылку ?</span>
+                        <form class="radio-block">
+
+                            <label class="radio-label">
+                                <input class="radio-input" type="radio" name="radio-group" checked>
+                                <span class="radio-text">Да</span>
+                            </label>
+                            <label class="radio-label">
+                                <input class="radio-input" type="radio" name="radio-group">
+                                <span class="radio-text">Нет</span>
+                            </label>
+
+                        </form>
+                    </div>
+
+                    <div class="feedback-block">
+                        <span class="question">Расскажите, какой контент вы хотели бы видеть на нашем сайте ?</span>
+                        <textarea class="feedback-text-field" placeholder="Может, больше рецептов ?"></textarea>
+                    </div>
+                    <button type="button" class="feedback-button">Отправить</button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+
 </body>
+
+
+
+
 
 </html>
