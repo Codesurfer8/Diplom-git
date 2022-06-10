@@ -85,11 +85,6 @@
         font-size: 2rem;
     }
 
-    /* .product1, */
-    /* .product2 { */
-    /* margin-right: 113px; */
-    /* } */
-
     .goods-block {
         gap: 113px;
         margin-left: 15px;
@@ -97,6 +92,24 @@
 
         padding-left: 24px;
         padding-right: 24px;
+    }
+
+    .popup-container {
+        width: 390px;
+        min-height: 589px;
+    }
+
+    .feedback-title {
+        font-size: 20px;
+    }
+
+    .popup-field {
+        margin: 54px 30px;
+    }
+
+    .feedback-text-field {
+        min-width: 330px;
+        max-width: 330px;
     }
 }
 
@@ -210,16 +223,23 @@
         margin-left: 56px;
     }
 
+    .popup-container {
+        width: 390px;
+        min-height: 596px;
+    }
 
+    .feedback-title {
+        font-size: 18px;
+    }
 
-    /* .product1 { */
-    /* margin-right: 68px; */
-    /* margin-bottom: 48px; */
-    /* } */
+    .popup-field {
+        margin: 0 30px;
+    }
 
-    /* .product2 { */
-    /* margin-right: 68px; */
-    /* } */
+    .feedback-text-field {
+        min-width: 330px;
+        max-width: 330px;
+    }
 }
 
 
@@ -357,6 +377,24 @@
         flex-wrap: wrap;
         gap: 44px;
         padding-left: 35px;
+    }
+
+    .popup-container {
+        width: 330px;
+        min-height: 546px;
+    }
+
+    .feedback-title {
+        font-size: 16px;
+    }
+
+    .popup-field {
+        margin: 30px 24px;
+    }
+
+    .feedback-text-field {
+        min-width: 280px;
+        max-width: 280px;
     }
 
 }
@@ -593,6 +631,11 @@ body {
     font-weight: bold;
 }
 
+.trend-topic-link:hover {
+    outline-offset: 4px;
+    outline: 1px solid #b59f5b;
+}
+
 .trend-title-text {
     font-size: 20px;
     font-weight: bold;
@@ -604,6 +647,11 @@ body {
 .trend-title-link {
     text-decoration: none;
     color: #ffffff;
+}
+
+.trend-title-link:hover {
+    color: #b59f5b;
+    transition: 0.4s;
 }
 
 
@@ -642,6 +690,7 @@ body {
 
 .category-list {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     font-size: 14px;
     font-weight: bold;
@@ -668,6 +717,11 @@ body {
 .frame-title-link {
     text-decoration: none;
     color: #0f0d0e;
+}
+
+.frame-title-link:hover {
+    color: #b59f5b;
+    transition: 0.4s;
 }
 
 
@@ -769,8 +823,9 @@ body {
 
 .search {
     display: flex;
+    justify-content: center;
     margin-bottom: 62px;
-    
+
 }
 
 .visual-hidden-field {
@@ -865,7 +920,7 @@ body {
 }
 
 .email-field {
-    width: 270px;
+    width: 100%;
     height: 48px;
     border: 0;
     padding: 0 18px;
@@ -892,7 +947,7 @@ body {
 }
 
 .button-subscribe {
-    width: 270px;
+    width: 100%;
     min-height: 48px;
     border: 0;
 
@@ -1248,6 +1303,17 @@ body {
 
 }
 
+.visual-hidden-icons {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .social-icon-twitter {
     background-image: url(../svg/004-twitter.svg);
     background-repeat: no-repeat;
@@ -1299,6 +1365,7 @@ body {
     font-size: 12px;
     font-weight: bold;
     color: #999999;
+    text-decoration: none;
 }
 
 
@@ -1326,8 +1393,6 @@ body {
 .popup-container {
     position: relative;
     z-index: 2;
-    width: 350px;
-    height: 500px;
     margin: auto 0;
 
     background: white;
@@ -1350,7 +1415,6 @@ body {
 
 .feedback-title {
     text-align: center;
-    font-size: 13px;
     text-transform: uppercase;
 
     margin: 24px 0 15px 0;
@@ -1369,9 +1433,6 @@ body {
     margin-top: 15px;
 }
 
-.popup-field {
-    margin: 0 15px;
-}
 
 .question {
     display: block;
@@ -1380,7 +1441,7 @@ body {
 
 .select-field {
     width: 100%;
-    height: 40px;
+    height: 48px;
 
 
     color: #989898;
@@ -1397,7 +1458,7 @@ body {
     border: none;
     cursor: pointer;
 
-    margin: 10px 0 20px 0;
+    margin: 12px 0 37px 0;
     padding-left: 14px;
 }
 
@@ -1407,7 +1468,7 @@ body {
 
 .radio-block {
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 44px;
     margin-right: 20px;
 }
 
@@ -1451,11 +1512,9 @@ body {
 }
 
 .feedback-text-field {
-    max-width: 318px;
 
-    min-width: 318px;
-    min-height: 115px;
-    max-height: 115px;
+    min-height: 131px;
+    max-height: 131px;
 
     background: #f4f7f6;
     border: none;
@@ -1483,7 +1542,7 @@ body {
     border: none;
     cursor: pointer;
 
-    margin-top: 20px;
+    margin-top: 25px;
 
 }
 
